@@ -2837,6 +2837,13 @@ function Library:credit(options)
 	})
 end
 
+function Library:label(options)
+	options = self:set_defaults({
+		Name = "Label",
+		Description = "Description",
+		Callback = function() end
+	}
+
 function Library:_theme_selector()
 
 	local themesCount = 0
