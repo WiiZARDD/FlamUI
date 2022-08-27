@@ -884,6 +884,13 @@ function Library:create(options)
 		end,
 	}
 
+		settingsTab:label{
+		Name = "Label",
+		Description = "Description",
+		Callback = function()
+		end
+	}
+	
 	settingsTab:slider{
 		Name = "UI Drag Speed",
 		Description = "How smooth the dragging looks.",
