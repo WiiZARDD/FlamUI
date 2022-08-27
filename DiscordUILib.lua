@@ -428,6 +428,32 @@ function DiscordLib:Window(text)
 	)
 
 	MinimizeBtn.MouseButton1Click:Connect(
+		
+		function onKeyPress(actionName, userInputState, inputObject)
+    if userInputState == Enum.UserInputState.Begin then
+        print("R was pressed")
+        if toggle == false then
+             toggle = true
+				MainFrame:TweenSize(
+					UDim2.new(0, 681, 0, 22),
+					Enum.EasingDirection.Out,
+					Enum.EasingStyle.Quart,
+					.3,
+					true
+				)
+        else
+            toggle = false
+				MainFrame:TweenSize(
+					UDim2.new(0, 681, 0, 396),
+					Enum.EasingDirection.Out,
+					Enum.EasingStyle.Quart,
+					.3,
+					true
+				)
+        end
+    end
+end
+		
 		function()
 			if minimized == false then
 				MainFrame:TweenSize(
